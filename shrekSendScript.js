@@ -19,7 +19,7 @@ async function enviarScript(scriptText){
 	return lines.length
 }
 
-enviarScript(`
+const dialog = `
 SHREK
 
 Written by
@@ -3697,4 +3697,6 @@ black) Oh, that's funny. Oh. Oh. I can't
 breathe. I can't breathe.
 
 THE END
-`).then(e => console.log(`Código finalizado, ${e} mensagens enviadas`)).catch(console.error)
+`;
+
+enviarScript(dialog).then(e => console.log(`Código finalizado, ${e} mensagens enviadas`)).catch(console.error)
